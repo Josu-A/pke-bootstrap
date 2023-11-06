@@ -1,9 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
     <title>Aginaga Iturrioz Oscoz PKE</title>
+    <style>
+        div > div.col-sm-3 > a {
+            display: block;
+        }
+        img {
+            aspect-ratio: 1 / 1;
+            width: 300px;
+        }
+    </style>
 </head>
 <body>
-    <head></head>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="p-3 mb-2 bg-primary text-white">GRAL-ari buruzko informazioa</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="public/araudia.html" target="_blank">
+                    <img src="images/araudia.jpeg" class="img-fluid img-thumbnail"/>
+                </a>
+                <p align="center">
+                    Araudia
+                </p>
+            </div>
+            <div class="col-sm-3">
+                <a href="public/egutegia.html" target="_blank">
+                    <img src="images/egutegia.jpeg" class="img-fluid img-thumbnail"/>
+                </a>
+                <p align="center">
+                    Deialdien egutegia
+                </p>
+            </div>
+            <div class="col-sm-3">
+                <a href="public/memoriak.html" target="_blank">
+                  <img src="data:image/png;base64,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" class="img-fluid img-thumbnail"/>
+                </a>
+                <p align="center">
+                  Memorien kontsulta
+                </p>
+            </div>
+            <div class="col-sm-3">
+                <a href="public/galdetegia.html" target="_blank">
+                    <img src="images/galdetegia.png" class="img-fluid img-thumbnail"/>
+                </a>
+                <p align="center">
+                    Galdetegia
+                </p>
+            </div>
+        </div>
+      </div>
 </body>
 </html>
