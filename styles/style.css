@@ -1,0 +1,7 @@
+div > div.col-sm-3 > a {
+    display: block;
+}
+img {
+    aspect-ratio: 1 / 1;
+    width: 300px;
+}
