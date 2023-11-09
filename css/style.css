@@ -13,7 +13,7 @@ body {
 }
 
 #banner::before {
-    background-image: url('/images/informatika-fakultatea.jpeg');
+    background-image: url('../images/informatika-fakultatea.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
