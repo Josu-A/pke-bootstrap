@@ -36,13 +36,13 @@
                                 <a class="nav-link" href="araudia.html">Araudia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Deialdien Egutegia</a>
+                                <a class="nav-link" href="egutegia.html">Deialdien Egutegia</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="memoriak.html">Memorien kontsulta</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="galdetegia.html">Galdetegia</a>
+                                <a class="nav-link active" href="#">Galdetegia</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about-us.html">About us</a>
@@ -69,236 +69,221 @@
         </div>
     </header>
     <main class="container py-5 px-4">
-        <div class="row">
+        <div class="row mb-4">
             <div class="col">
                 <h2 class="fs-4">Hemen, zure ezagutzak frogatzeko galdetegi bat erantzun dezakezu:</h2>
             </div>
         </div>
-        <br></br>
         <form>
-            <div class="form-group">
-                <label for="korreoa">Email-a</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <input type="email" class="form-control" id="korreoa" aria-describedby="emailHelp" placeholder="Email-a sartu">
-                <small id="emailHelp" class="form-text text-muted">Ez dugu zure korreoa inorekin partekatuko.</small>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera1">WebGune hau ofiziala al da?</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
-                    <label class="form-check-label" for="exampleRadios1">
-                        BAI
-                    </label>
+            <fieldset class="mb-4">
+                <legend>Identifikazioa</legend>
+                <div>
+                    <label class="form-label" for="korreoa">Email-a</label>
+                    <input type="email" class="form-control" id="korreoa" aria-describedby="emailHelp" placeholder="Email-a sartu" required>
+                    <div id="emailHelp" class="form-text text-muted">
+                        Ez dugu zure korreoa inorekin partekatuko.
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        EZ
-                    </label>
+            </fieldset>
+            <fieldset>
+                <legend>Galderak</legend>
+                <div class="mb-3">
+                    <label>WebGune hau ofiziala al da?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera1" id="galdera1E1" value="bai" required>
+                        <label class="form-check-label" for="galdera1E1">
+                            Bai
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera1" id="galdera1E2" value="ez" required>
+                        <label class="form-check-label" for="galdera1E2">
+                            Ez
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera2">Zer esan nahi du GrAL-ek?</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
-                        Gradu amaierako lana
-                    </label>
+                <div class="mb-3">
+                    <label>Zer esan nahi du GrAL-ek?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera2" id="galdera2E1" value="gal" required>
+                        <label class="form-check-label" for="galdera2E1">
+                            Gradu amaierako lana
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera2" id="galdera2E2" value="ghl" required>
+                        <label class="form-check-label" for="galdera2E2">
+                            Gradu hasierako lana
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios4" value="option3">
-                    <label class="form-check-label" for="exampleRadios4">
-                        Gradu asierako lana
-                    </label>
+                <div class="mb-3">
+                    <label>Epaimahaiak emandako kalifikazioan, zenbat lortu behar da oso ongi (OO) lortzeko?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E1" value="6-7" required>
+                        <label class="form-check-label" for="galdera3E1">
+                            (6 - 7)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E2" value="7,5-8,5" required>
+                        <label class="form-check-label" for="galdera3E2">
+                            (7,5 - 8,5)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E3" value="7,0-8,9" required>
+                        <label class="form-check-label" for="galdera3E3">
+                            (7,0 - 8,9)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E4" value="6,9-7,9" required>
+                        <label class="form-check-label" for="galdera3E4">
+                            (6,9 - 7,9)
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera3">
-                    Epaimahaiak emandako kalifikazioan, zenbat lortu behar da oso ongi (OO) lortzeko ?
-                </label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios5" value="option5">
-                    <label class="form-check-label" for="exampleRadios5">
-                        (6 -7)
-                    </label>
+                <div class="mb-3">
+                    <label>Gradu guztietan GrAL-ak araudi berdina jarraitzen al du?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E1" value="bai-beti" required>
+                        <label class="form-check-label" for="galdera4E1">
+                            Bai, GrAL-ak beti araudi bera jarraitzen du, zorrotz
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E2" value="bai-berezitasun" required>
+                        <label class="form-check-label" for="galdera4E2">
+                            Bai, baina gradu bakoitzaren berezitasunetara egokitu ohi da
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E3" value="ez" required>
+                        <label class="form-check-label" for="galdera4E3">
+                            Ez, fakultate bakoitzak jar ditzake nahi dituen arauak
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios6" value="option6">
-                    <label class="form-check-label" for="exampleRadios6">
-                        (7,5 - 8,5)
-                    </label>
+                <div class="mb-3">
+                    <label>Araudi orokorrean, zenbat artikulu daude?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E1" value="11" required>
+                        <label class="form-check-label" for="galdera5E1">
+                            11 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E2" value="8" required>
+                        <label class="form-check-label" for="galdera5E2">
+                            8 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E3" value="7" required>
+                        <label class="form-check-label" for="galdera5E3">
+                            7 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E4" value="ez" required>
+                        <label class="form-check-label" for="galdera5E4">
+                            Ez dakit
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios7" value="option7">
-                    <label class="form-check-label" for="exampleRadios7">
-                        (7,0 - 8,9)
-                    </label>
+                <div class="mb-3">
+                    <label>Zer gertatzen da GrAL-a gainditzen ez baduzu?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E1" value="kanporatu" required>
+                        <label class="form-check-label" for="galdera6E1">
+                            Gradutik kanportatzen zaituzte, bigarren aukerarik eman gabe
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E2" value="iradokizun" required>
+                        <label class="form-check-label" for="galdera6E2">
+                            Epaimahaiak lana hobetzeko iradokizunen txosten bat emango dizu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E3" value="errepikatu" required>
+                        <label class="form-check-label" for="galdera6E3">
+                            Gradua errepikatu behar da beste aukera bat lortzeko
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios8" value="option8">
-                    <label class="form-check-label" for="exampleRadios8">
-                        (6,9 - 7,9)
-                    </label>
+                <div class="mb-3">
+                    <label>Egia direnak soilik aukeratu:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="galdera7E1" id="galdera7E1">
+                        <label class="form-check-label" for="galdera7E1">
+                            Epaimahaiak ez du zertan eleaniztasuna bermatu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="galdera7E2" id="galdera7E2">
+                        <label class="form-check-label" for="galdera7E2">
+                            Epaimahaia hiru kidek eta, gutxienez, ordezko batek osatu behar dute
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="galdera7E3" id="galdera7E3">
+                        <label class="form-check-label" for="galdera7E3">
+                            Epaimahaiko kide guztiek graduko irakasleak izan behar dute
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="galdera7E4" id="galdera7E4">
+                        <label class="form-check-label" for="galdera7E4">
+                            GrAL-ak zuzendari bakar bat izan dezake
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" name="galdera7E5" id="galdera7E5">
+                        <label class="form-check-label" for="galdera7E5">
+                            GrAL-ean 9-ko nota edo altuagoa lortu duten ikasle guztiei ematen zaie ohorezko matrikula
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera4">Gradu guztietan GrAL-ak araudi berdina jarraitzen al du? </label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios9" value="option9">
-                    <label class="form-check-label" for="exampleRadios9">
-                        Bai, GrAL-ak beti araudi bera jarraitzen du, zorrotz
-                    </label>
+                <div class="mb-3">
+                    <label>GrAL-a ze motako lana da?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera8" id="galdera8E1" value="talde" required>
+                        <label class="form-check-label" for="galdera8E1">
+                            Taldekakoa
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera8" id="galdera8E2" value="bakar" required>
+                        <label class="form-check-label" for="galdera8E2">
+                            Bakarkakoa
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios10" value="option10">
-                    <label class="form-check-label" for="exampleRadios10">
-                        Bai, baina gradu bakoitzaren berezitasunetara egokitu ohi da
-                    </label>
+                <div class="mb-3">
+                    <label>Posible al da GrAL-a egin gabe graduko titulua lortzea?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E1" value="bai" required>
+                        <label class="form-check-label" for="galdera9E1">
+                            Bai
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E2" value="ez" required>
+                        <label class="form-check-label" for="galdera9E2">
+                            Ez
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E3" value="bi-aldiz" required>
+                        <label class="form-check-label" for="galdera9E3">
+                            Irakasgai guztiak bi aldiz egiten dituzu soilik
+                        </label>
+                    </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios11" value="option11">
-                    <label class="form-check-label" for="exampleRadios11">
-                        Ez, fakultate bakoitzak jar ditzake nahi dituen arauak
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera5">Araudi orokorrean, zenbat artikulu daude? </label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios12" value="option12">
-                    <label class="form-check-label" for="exampleRadios12">
-                        11 Artikulu
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios13" value="option13">
-                    <label class="form-check-label" for="exampleRadios13">
-                        8 Artikulu
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios14" value="option14">
-                    <label class="form-check-label" for="exampleRadios14">
-                        7 Artikulu
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios15" value="option15">
-                    <label class="form-check-label" for="exampleRadios15">
-                        Ez dakit
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera6">Zer gertatzen da GrAL-a gainditzen ez baduzu?</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios16" value="option16">
-                    <label class="form-check-label" for="exampleRadios16">
-                        Gradutik kanportatzen zaituzte, bigarren aukerarik eman gabe
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios16" value="option16">
-                    <label class="form-check-label" for="exampleRadios16">
-                        Epaimahaiak lana hobetzeko iradokizunen txosten bat emango dizu
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios6" id="exampleRadios17" value="option17">
-                    <label class="form-check-label" for="exampleRadios17">
-                        Gradua errepikatu behar da beste aukera bat lortzeko
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera7">Egia direnak soilik aukeratu: </label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">
-                        Epaimahaiak ez du zertan eleaniztasuna bermatu
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">
-                        Epaimahaia hiru kidek eta, gutxienez, ordezko batek osatu behar dute
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                    <label class="form-check-label" for="defaultCheck3">
-                        Epaimahaiko kide guztiek graduko irakasleak izan behar dute
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                    <label class="form-check-label" for="defaultCheck4">
-                        GrAL-ak zuzendari bakar bat izan dezake
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                    <label class="form-check-label" for="defaultCheck5">
-                        GrAL-ean 9-ko nota edo altuagoa lortu duten ikasle guztiei ematen zaie ohorezko matrikula
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera8">GrAL-a ze motako lana da?</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios18" value="option18">
-                    <label class="form-check-label" for="exampleRadios18">
-                        Taldekakoa
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios7" id="exampleRadios19" value="option19">
-                    <label class="form-check-label" for="exampleRadios19">
-                        Bakarkakoa
-                    </label>
-                </div>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="galdera9">Zer gertatzen da GrAL-a gainditzen ez baduzu?</label>
-                <div style="height:10px;font-size:10px;"></div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios20" value="option20">
-                    <label class="form-check-label" for="exampleRadios20">
-                        Bai
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios21" value="option21">
-                    <label class="form-check-label" for="exampleRadios21">
-                        Ez
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios8" id="exampleRadios22" value="option22">
-                    <label class="form-check-label" for="exampleRadios22">
-                        Irakasgai guztiak bi aldiz egiten dituzu soilik
-                    </label>
-                </div>
-            </div>
-            <br></br>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+            <button type="submit" class="btn btn-primary">Bidali</button>
         </form>
     </main>
     <footer class="container-fluid bg-dark pb-3 pt-4 px-5">
