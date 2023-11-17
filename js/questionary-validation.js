@@ -5,7 +5,7 @@ const solutions = {
     'galdera4': 'bai-berezitasun',
     'galdera5': '7',
     'galdera6': 'iradokizun',
-    'galdera7': '',
+    'galdera7': ['kideak', 'irakasleak'],
     'galdera8': 'bakar',
     'galdera9': 'ez'
 };
@@ -31,6 +31,9 @@ function getResponses() {
     const erantunza6Element = document.querySelector('input[name="galdera6"]:checked');
     responses['galdera6'] = erantunza6Element ? erantunza6Element.value : '';
 
+    const erantzuna7Elements = document.querySelectorAll('input[name="galdera7"]:checked');
+    responses['galdera7'] = erantzuna7Elements ? Array.from(erantzuna7Elements).map(elem => elem.value) : [];
+
     const erantunza8Element = document.querySelector('input[name="galdera8"]:checked');
     responses['galdera8'] = erantunza8Element ? erantunza8Element.value : '';
 
@@ -45,7 +48,9 @@ function checkFormResponse() {
     const messageOk = '<p>Ederto! Erantzun guztiak zuzenak dira!</p>'
     const responses = getResponses();
     for (let i = 1; i <= 9; i++) {
-        if (responses[`galdera${i}`] != solutions[`galdera${i}`]) {
+        let responseI = JSON.stringify(responses[`galdera${i}`]);
+        let solutionI = JSON.stringify(solutions[`galdera${i}`]);
+        if (responseI != solutionI) {
             message += `<p>${i}. galderaren erantzuna okerra da!</p>`
         }
     }
