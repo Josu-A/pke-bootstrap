@@ -1,0 +1,46 @@
+.offcanvas {
+    --bs-offcanvas-width: 700px;
+}
+
+body {
+    background-color: hsl(0, 0%, 12%);
+}
+
+#banner {
+    min-height: 40vh;
+    position: relative;
+    width: 100%;
+}
+
+#banner::before {
+    background-image: url('../images/informatika-fakultatea.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    filter: brightness(0.5);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.question-wrapper {
+    --border-radius: 10px;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    border-block-style: ridge;
+    border-width: thin;
+    margin-bottom: 1rem;
+    padding: 4px;
+}
+
+.question-wrapper:nth-child(odd) {
+    background-color: hsl(0, 0%, 8%);
+}
+
+.form-check {
+    padding-bottom: 0.3rem;
+}

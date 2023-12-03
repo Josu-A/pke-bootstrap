@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="eu" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Josu Aginaga, Jon Ander Iturrioz, Mikel Oscoz">
+    <meta name="description" content="EHU-ko GrAL-ren arabera informazioa aurkezten duen web ez ofiziala">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Galdetegia - GrAL informazioa</title>
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="/javascripts/js/bootstrap.bundle.min.js" defer></script>
+    <script src="javascripts/questionary-validation.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark sticky-top py-3">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Navigation toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    EHU-UPV<img src="favicon.ico" alt="Logo" width="30" height="24" class="d-inline-block align-text-top ms-3" style="filter: invert(1);">
+                </a>
+                <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Nabigazioa</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">Hasiera</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="araudia">Araudia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="egutegia">Deialdien Egutegia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="memoriak">Memorien kontsulta</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Galdetegia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-us">About us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-md pt-3">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex justify-content-center">
+                        <div id="banner" class="d-flex justify-content-center align-items-center text-center text-white">
+                            <h1 class="m-0">Galdetegia</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container py-5 px-4">
+        <div class="row mb-4">
+            <div class="col">
+                <h2 class="fs-4">Hemen, zure ezagutzak frogatzeko galdetegi bat erantzun dezakezu:</h2>
+            </div>
+        </div>
+        <form id="galdetegia">
+            <fieldset class="mb-4">
+                <legend>Identifikazioa</legend>
+                <div>
+                    <label class="form-label" for="korreoa">Email-a</label>
+                    <input type="email" class="form-control" id="korreoa" aria-describedby="emailHelp" placeholder="Email-a sartu" required>
+                    <div id="emailHelp" class="form-text text-muted">
+                        Ez dugu zure korreoa inorekin partekatuko.
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Galderak</legend>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">1. WebGune hau ofiziala al da?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera1" id="galdera1E1" value="bai" required>
+                        <label class="form-check-label" for="galdera1E1">
+                            Bai
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera1" id="galdera1E2" value="ez" required>
+                        <label class="form-check-label" for="galdera1E2">
+                            Ez
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">2. Zer esan nahi du GrAL-ek?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera2" id="galdera2E1" value="gal" required>
+                        <label class="form-check-label" for="galdera2E1">
+                            Gradu amaierako lana
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera2" id="galdera2E2" value="ghl" required>
+                        <label class="form-check-label" for="galdera2E2">
+                            Gradu hasierako lana
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">3. Epaimahaiak emandako kalifikazioan, zenbat lortu behar da oso ongi (OO) lortzeko?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E1" value="6-7" required>
+                        <label class="form-check-label" for="galdera3E1">
+                            (6 - 7)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E2" value="7,5-8,5" required>
+                        <label class="form-check-label" for="galdera3E2">
+                            (7,5 - 8,5)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E3" value="7,0-8,9" required>
+                        <label class="form-check-label" for="galdera3E3">
+                            (7,0 - 8,9)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera3" id="galdera3E4" value="6,9-7,9" required>
+                        <label class="form-check-label" for="galdera3E4">
+                            (6,9 - 7,9)
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">4. Gradu guztietan GrAL-ak araudi berdina jarraitzen al du?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E1" value="bai-beti" required>
+                        <label class="form-check-label" for="galdera4E1">
+                            Bai, GrAL-ak beti araudi bera jarraitzen du, zorrotz
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E2" value="bai-berezitasun" required>
+                        <label class="form-check-label" for="galdera4E2">
+                            Bai, baina gradu bakoitzaren berezitasunetara egokitu ohi da
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera4" id="galdera4E3" value="ez" required>
+                        <label class="form-check-label" for="galdera4E3">
+                            Ez, fakultate bakoitzak jar ditzake nahi dituen arauak
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">5. Araudi orokorrean, zenbat artikulu daude?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E1" value="11" required>
+                        <label class="form-check-label" for="galdera5E1">
+                            11 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E2" value="8" required>
+                        <label class="form-check-label" for="galdera5E2">
+                            8 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E3" value="7" required>
+                        <label class="form-check-label" for="galdera5E3">
+                            7 Artikulu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera5" id="galdera5E4" value="ez" required>
+                        <label class="form-check-label" for="galdera5E4">
+                            Ez dakit
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">6. Zer gertatzen da GrAL-a gainditzen ez baduzu?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E1" value="kanporatu" required>
+                        <label class="form-check-label" for="galdera6E1">
+                            Gradutik kanportatzen zaituzte, bigarren aukerarik eman gabe
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E2" value="iradokizun" required>
+                        <label class="form-check-label" for="galdera6E2">
+                            Epaimahaiak lana hobetzeko iradokizunen txosten bat emango dizu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera6" id="galdera6E3" value="errepikatu" required>
+                        <label class="form-check-label" for="galdera6E3">
+                            Gradua errepikatu behar da beste aukera bat lortzeko
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">7. Egia direnak soilik aukeratu:</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="eleaniztasuna-ez" name="galdera7" id="galdera7E1">
+                        <label class="form-check-label" for="galdera7E1">
+                            Epaimahaiak ez du zertan eleaniztasuna bermatu
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="kideak" name="galdera7" id="galdera7E2">
+                        <label class="form-check-label" for="galdera7E2">
+                            Epaimahaia hiru kidek eta, gutxienez, ordezko batek osatu behar dute
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="irakasleak" name="galdera7" id="galdera7E3">
+                        <label class="form-check-label" for="galdera7E3">
+                            Epaimahaiko kide guztiek graduko irakasleak izan behar dute
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="zuzendari-bat" name="galdera7" id="galdera7E4">
+                        <label class="form-check-label" for="galdera7E4">
+                            GrAL-ak zuzendari bakar bat izan dezake
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="ohorezko-matrikula" name="galdera7" id="galdera7E5">
+                        <label class="form-check-label" for="galdera7E5">
+                            GrAL-ean 9-ko nota edo altuagoa lortu duten ikasle guztiei ematen zaie ohorezko matrikula
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">8. GrAL-a ze motako lana da?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera8" id="galdera8E1" value="talde" required>
+                        <label class="form-check-label" for="galdera8E1">
+                            Taldekakoa
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera8" id="galdera8E2" value="bakar" required>
+                        <label class="form-check-label" for="galdera8E2">
+                            Bakarkakoa
+                        </label>
+                    </div>
+                </div>
+                <div class="question-wrapper">
+                    <label class="mb-3 fs-5">9. Posible al da GrAL-a egin gabe graduko titulua lortzea?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E1" value="bai" required>
+                        <label class="form-check-label" for="galdera9E1">
+                            Bai
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E2" value="ez" required>
+                        <label class="form-check-label" for="galdera9E2">
+                            Ez
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="galdera9" id="galdera9E3" value="bi-aldiz" required>
+                        <label class="form-check-label" for="galdera9E3">
+                            Irakasgai guztiak bi aldiz egiten dituzu soilik
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#answers-modal">Bidali</button>
+        </form>
+        <div class="modal fade" id="answers-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Emaitzak</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Itxi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-dark pb-3 pt-4 px-5">
+        <div class="row text-center">
+            <div class="col text-warning-emphasis">
+                ⚠️ Orri honek ez du helburu informazio ofiziala ematea. Hau eskuratzeko, joan <a href="https://www.ehu.eus" target="_blank" rel="noreferrer noopener">www.ehu.eus</a> webgunera. ⚠️
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
