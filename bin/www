@@ -5,7 +5,7 @@
  */
 
 const app = require('../app');
-const debug = require('debug')('pke-express-gral:server');
+const debug = require('debug')('express-gral:server');
 const http = require('http');
 
 /**
